@@ -1,0 +1,6 @@
+encoding "utf8";
+
+TAuxDicArticle "линия"
+{
+    key = "линия"
+}
