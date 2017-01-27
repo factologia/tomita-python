@@ -1,0 +1,17 @@
+# for container-y goodness:
+sudo: false
+
+language: python
+
+python:
+  - "3.5"
+  - "3.4"
+  - "3.3"
+
+# command to install dependencies
+install:
+  - "pip install -U pip setuptools"
+  - "pip install -Ur requirements.txt"
+
+# command to run tests, e.g. python setup.py test
+script: cd src && python -m pytest ../tests/tests.py
