@@ -13,5 +13,12 @@ install:
   - "pip install -U pip setuptools"
   - "pip install -Ur requirements.txt"
 
+before_script:
+  - mkdir bin
+  - wget http://download.cdn.yandex.net/tomita/tomita-linux64.bz2 -O bin/tomita-linux64.bz2
+  - bunzip2 bin/tomita-linux64.bz2
+  - chmod +x bin/tomita-linux64
+  - export PATH=$PATH:$PWD/bin
+
 # command to run tests, e.g. python setup.py test
 script: cd src && python -m pytest ../tests/tests.py
