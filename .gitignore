@@ -76,3 +76,4 @@ ENV/
 
 # tomita parser
 *.bin
+PrettyOutput.html
